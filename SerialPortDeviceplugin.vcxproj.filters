@@ -67,60 +67,6 @@
     <ClCompile Include="SerialPortDeviceplugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Debug_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Release_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Release_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Template_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDeviceplugin.cpp">
-      <Filter>Form Files\Generated Files\Template_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Debug_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Release_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Release_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Template_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDevice_dialog.cpp">
-      <Filter>Form Files\Generated Files\Template_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Debug_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Release_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Release_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Template_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDevice.cpp">
-      <Filter>Form Files\Generated Files\Template_x64</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_qextserialenumerator.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
@@ -136,43 +82,97 @@
     <ClCompile Include="Console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Debug_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Release_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Release_x64</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Template_Win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_Console.cpp">
-      <Filter>Form Files\Generated Files\Template_x64</Filter>
-    </ClCompile>
     <ClCompile Include="SettingsDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SettingsDialog.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_SettingsDialog.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_SettingsDialog.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_SettingsDialog.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_SettingsDialog.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_SettingsDialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_SettingsDialog.cpp">
+      <Filter>Form Files\Generated Files\Template_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Template_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDevice_dialog.cpp">
+      <Filter>Form Files\Generated Files\Template_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Template_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDeviceplugin.cpp">
+      <Filter>Form Files\Generated Files\Template_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Template_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_SerialPortDevice.cpp">
+      <Filter>Form Files\Generated Files\Template_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_Console.cpp">
+      <Filter>Form Files\Generated Files\Debug_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_Console.cpp">
+      <Filter>Form Files\Generated Files\Debug_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_Console.cpp">
+      <Filter>Form Files\Generated Files\Release_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_Console.cpp">
+      <Filter>Form Files\Generated Files\Release_x64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_Console.cpp">
+      <Filter>Form Files\Generated Files\Template_Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_Console.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
   </ItemGroup>
@@ -183,9 +183,6 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_SerialPortDevice_dialog.h">
-      <Filter>Form Files\Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -195,7 +192,10 @@
     <ClInclude Include="..\..\BrainStim\plugininterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_SettingsDialog.h">
+    <ClInclude Include="..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_SerialPortDevice_dialog.h">
+      <Filter>Form Files\Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_SettingsDialog.h">
       <Filter>Form Files\Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
