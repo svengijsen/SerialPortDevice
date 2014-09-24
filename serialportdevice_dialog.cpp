@@ -16,9 +16,9 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#include "SerialPortDevice_dialog.h"
-#include "Console.h"
-#include "SettingsDialog.h"
+#include "serialportdevice_dialog.h"
+#include "console.h"
+#include "settingsdialog.h"
 #include <QMessageBox>
 //#include <QtSerialPort/QSerialPort>
 

@@ -55,16 +55,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StdAfx.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SerialPortDevice.cpp">
+    <ClCompile Include="serialportdevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SerialPortDevice_dialog.cpp">
+    <ClCompile Include="serialportdevice_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SerialPortDeviceplugin.cpp">
+    <ClCompile Include="serialportdeviceplugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_qextserialenumerator.cpp">
@@ -79,10 +79,10 @@
     <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_qextserialport.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="Console.cpp">
+    <ClCompile Include="console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SettingsDialog.cpp">
+    <ClCompile Include="settingsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_SettingsDialog.cpp">
@@ -177,10 +177,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Global.h">
+    <ClInclude Include="global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StdAfx.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -200,33 +200,33 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="SerialPortDevice.h">
+    <CustomBuild Include="serialportdevice.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SerialPortDevice_dialog.h">
+    <CustomBuild Include="serialportdevice_dialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SerialPortDeviceplugin.h">
+    <CustomBuild Include="serialportdeviceplugin.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SerialPortDevice_dialog.ui">
+    <CustomBuild Include="serialportdevice_dialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="Console.h">
+    <CustomBuild Include="console.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SettingsDialog.h">
+    <CustomBuild Include="settingsdialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SettingsDialog.ui">
+    <CustomBuild Include="settingsdialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="SerialPortDeviceplugin.rc" />
+    <ResourceCompile Include="serialportdeviceplugin.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="licenseHeader.licenseheader" />
-    <None Include="SerialPortDevice.json" />
+    <None Include="licenseheader.licenseheader" />
+    <None Include="serialportdevice.json" />
   </ItemGroup>
 </Project>

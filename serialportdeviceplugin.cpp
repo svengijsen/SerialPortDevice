@@ -17,8 +17,8 @@
 //
 
 
-#include "SerialPortDeviceplugin.h"
-#include "SerialPortDevice.h"
+#include "serialportdeviceplugin.h"
+#include "serialportdevice.h"
 #include "defines.h"
 #include "mainappinfo.h"
 

@@ -28,14 +28,14 @@
 #include <Qlibrary>
 
 #include "plugininterface.h"
-#include "SerialPortDevice_dialog.h"
-#include "SerialPortDevice.h"
+#include "serialportdevice_dialog.h"
+#include "serialportdevice.h"
 #include "defines.h"
 
 class SerialPortDevicePlugin : public QObject, DeviceInterface
 {
     Q_OBJECT
-	Q_PLUGIN_METADATA(IID "BrainStim.Plugins.Devices" "SerialPortDevice.json")
+	Q_PLUGIN_METADATA(IID "BrainStim.Plugins.Devices" "serialportdevice.json")
     Q_INTERFACES(DeviceInterface)
 
 public:

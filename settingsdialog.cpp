@@ -1,4 +1,4 @@
-#include "SettingsDialog.h"
+#include "settingsdialog.h"
 #include "ui_SettingsDialog.h"
 
 #include <QtSerialPort/QSerialPortInfo>

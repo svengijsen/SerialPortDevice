@@ -24,7 +24,7 @@
 #include <QDialog>
 #include <QtCore/QtGlobal>
 #include "ui_SerialPortDevice_dialog.h"
-#include "SerialPortDevice.h"
+#include "serialportdevice.h"
 #include <QtWidgets>
 
 class Console;

@@ -29,7 +29,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include "maindefines.h"
-#include "Global.h"
+#include "global.h"
 
 //!  The SerialPortDevice class. 
 /*!
