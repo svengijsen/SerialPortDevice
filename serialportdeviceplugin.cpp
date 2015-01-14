@@ -1,5 +1,5 @@
 //SerialPortDeviceplugin
-//Copyright (C) 2014  Sven Gijsen
+//Copyright (C) 2015  Sven Gijsen
 //
 //This file is part of BrainStim.
 //BrainStim is free software: you can redistribute it and/or modify
@@ -30,6 +30,7 @@ SerialPortDevicePlugin::SerialPortDevicePlugin(QObject *parent)
 	SerialPortDeviceObject = new SerialPortDevice(parent);//0x181b, 0x4002, parent);
 	SerialPortDeviceDiagObject = new SerialPortDevice_Dialog();	
 	strPluginInformation = PLUGIN_INFORMATION;
+	strPluginInternalName = PLUGIN_INTERNAL_NAME;
 }
 
 SerialPortDevicePlugin::~SerialPortDevicePlugin()

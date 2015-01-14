@@ -1,5 +1,5 @@
 //SerialPortDeviceplugin
-//Copyright (C) 2014  Sven Gijsen
+//Copyright (C) 2015  Sven Gijsen
 //
 //This file is part of BrainStim.
 //BrainStim is free software: you can redistribute it and/or modify
@@ -328,7 +328,7 @@ void SerialPortDevice_Dialog::openSerialPort()
 {
 	SettingsDialog::Settings p = settings->settings();
 	serial->setPortName(p.name);
-	if (serial->open(QIODevice::ReadWrite)) 
+	if (serial->open(QIODevice::ReadWrite))//QIODevice::ReadOnly)) //QIODevice::ReadWrite))
 	{
 		if (serial->setBaudRate(p.baudRate)
 			&& serial->setDataBits(p.dataBits)

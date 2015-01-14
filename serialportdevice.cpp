@@ -1,5 +1,5 @@
 //SerialPortDeviceplugin
-//Copyright (C) 2014  Sven Gijsen
+//Copyright (C) 2015  Sven Gijsen
 //
 //This file is part of BrainStim.
 //BrainStim is free software: you can redistribute it and/or modify
@@ -76,7 +76,8 @@ SerialPortDevice::~SerialPortDevice()
 	//disconnect(serialPort, SIGNAL(readyRead()), this, SLOT(ProcessSerialData()));
 	if (serialPort)
 	{
-		serialPort->close();
+		if (serialPort->isOpen())
+			serialPort->close();
 		delete serialPort;
 		serialPort = NULL;
 	}
@@ -115,7 +116,7 @@ bool SerialPortDevice::makeThisAvailableInScript(QString strObjectScriptName, QO
 	void SerialPortDevice::handleError(QSerialPort::SerialPortError error)
 	{
 		//if (error == QSerialPort::ResourceError) 
-		if (error != QSerialPort::UnknownError) 
+		if ((error != QSerialPort::UnknownError) && (error != QSerialPort::NoError))
 		{
 			qDebug() << __FUNCTION__ << ": Critical Error, " << serialPort->errorString();
 			serialPort->close();
@@ -223,7 +224,28 @@ bool SerialPortDevice::makeThisAvailableInScript(QString strObjectScriptName, QO
 	{
 		if(isInitialized())
 		{
-			return serialPort->open((QSerialPort::OpenMode)mode);
+			bool bResult = false;
+			//try 
+			//{
+			QSerialPort::OpenMode fOpenMode;
+			fOpenMode = (QSerialPort::OpenMode)mode;// 0x0001;//mode;//ReadOnly = 0x0001,
+			bResult = serialPort->open(fOpenMode);
+			//}
+			//catch (std::exception &e) 
+			//{
+			//	int aa = 66;
+				//qFatal("Error %s sending event %s to object %s (%s)",
+				//	e.what(), typeid(*event).name(), qPrintable(receiver->objectName()),
+				//	typeid(*receiver).name());
+			//}
+			//catch (...) 
+			//{
+			//	int b = 99;
+				//qFatal("Error <unknown> sending event %s to object %s (%s)",
+				//	typeid(*event).name(), qPrintable(receiver->objectName()),
+				//	typeid(*receiver).name());
+			//}
+			return bResult;
 		}
 		return false;
 	}
