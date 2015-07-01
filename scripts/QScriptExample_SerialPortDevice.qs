@@ -1,5 +1,5 @@
 var tTimer = new TriggerTimer();
-var nMaxIdleTime = 50000;
+var nMaxIdleTime = 5000;
 var bHasInitialized = false;
 var serialPortObject = new SerialPortDevice();
 
@@ -31,7 +31,7 @@ function myFinalCleanup()//Cleanup
 	BrainStim.cleanupScript();
 }
 
-if(serialPortObject.setPortName("COM2"))
+if(serialPortObject.setPortName("COM1"))
 {
 	serialPortObject.SerialDataReceived.connect(this, this.myDataReceivedFunction);
 	Log(serialPortObject.open(3));
