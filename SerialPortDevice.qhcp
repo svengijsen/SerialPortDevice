@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<QHelpCollectionProject version="1.0">
+<!--doc-version-qhelp-begin-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191501),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+  <assistant>
+		<title>SerialPortDevice plugin v1.0.0.1</title>
+    <applicationIcon>SerialPortDevice/images/logo.jpg</applicationIcon>
+    <cacheDirectory>svengijsen/BrainStim/Plugins/SerialPortDevice</cacheDirectory>
+    <startPage>qthelp://com.svengijsen.brainstim/doc/plugins/SerialPortDevice/index.html</startPage>
+    <aboutMenuText>
+        <text>About SerialPortDevice</text>
+    </aboutMenuText>
+    <aboutDialog>
+        <file>SerialPortDevice/additional/about.txt</file>
+        <icon>SerialPortDevice/images/logo.jpg</icon>
+    </aboutDialog>
+    <enableDocumentationManager>false</enableDocumentationManager>
+    <enableAddressBar>false</enableAddressBar>
+    <enableFilterFunctionality>false</enableFilterFunctionality>
+  </assistant>
+  <docFiles>
+  	<generate>
+    	<file>
+      	<input>SerialPortDevice.qhp</input>
+        <output>SerialPortDevice.qch</output>
+      </file>
+    </generate>
+    <register>
+    	<file>SerialPortDevice.qch</file>
+    </register>
+  </docFiles>
+	</QHelpCollectionProject>
+<!--doc-version-qhelp-end-->
