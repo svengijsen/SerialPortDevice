@@ -166,13 +166,13 @@ public slots:
 	/*!  This function returns the name set by SerialPortDevice.setPort() or to the SerialPortDevice constructors. 
 	 *   This name is short, i.e. it extract and convert out from the internal variable system location of the device. 
 	 *   Conversion algorithm is platform specific:\n\n
-	 *   Platform\t\t - Brief Description\n
-	 *   Windows\t\t - Removes the prefix "\\\.\\" from the system location and returns the remainder of the string.\n
-	 *	 Windows CE\t\t -	Removes the postfix ":" from the system location and returns the remainder of the string.\n
-	 *	 Symbian\t\t - Returns the system location as it is, as it is equivalent to the port name.\n
-	 *	 GNU/Linux\t\t - Removes the prefix "/dev/" from the system location and returns the remainder of the string.\n
-	 *	 Mac OSX\t\t - Removes the prefix "/dev/cu." and "/dev/tty." from the system location and returns the remainder of the string.\n
-	 *	 Other *nix\t\t -	The same as for GNU/Linux.
+	 *   Platform   - Brief Description\n
+	 *   Windows   - Removes the prefix "\\\.\\" from the system location and returns the remainder of the string.\n
+	 *	 Windows CE   -	Removes the postfix ":" from the system location and returns the remainder of the string.\n
+	 *	 Symbian   - Returns the system location as it is, as it is equivalent to the port name.\n
+	 *	 GNU/Linux   - Removes the prefix "/dev/" from the system location and returns the remainder of the string.\n
+	 *	 Mac OSX   - Removes the prefix "/dev/cu." and "/dev/tty." from the system location and returns the remainder of the string.\n
+	 *	 Other *nix   -	The same as for GNU/Linux.
 	 * @return a string value holding the port name.
 	 */	
 	QString	portName();
@@ -239,13 +239,13 @@ public slots:
 	/*!  This function configures the name of the serial port set by SerialPortDevice.setPort() or to the SerialPortDevice constructors. 
 	 *   This name is short, i.e. it extract and convert out from the internal variable system location of the device. 
 	 *   Conversion algorithm is platform specific:\n\n
-	 *   Platform\t\t - Brief Description\n
-	 *   Windows\t\t - Removes the prefix "\\\.\\" from the system location and returns the remainder of the string.\n
-	 *	 Windows CE\t\t -	Removes the postfix ":" from the system location and returns the remainder of the string.\n
-	 *	 Symbian\t\t - Returns the system location as it is, as it is equivalent to the port name.\n
-	 *	 GNU/Linux\t\t - Removes the prefix "/dev/" from the system location and returns the remainder of the string.\n
-	 *	 Mac OSX\t\t - Removes the prefix "/dev/cu." and "/dev/tty." from the system location and returns the remainder of the string.\n
-	 *	 Other *nix\t\t -	The same as for GNU/Linux.
+	 *   Platform   - Brief Description\n
+	 *   Windows   - Removes the prefix "\\\.\\" from the system location and returns the remainder of the string.\n
+	 *	 Windows CE   -	Removes the postfix ":" from the system location and returns the remainder of the string.\n
+	 *	 Symbian   - Returns the system location as it is, as it is equivalent to the port name.\n
+	 *	 GNU/Linux   - Removes the prefix "/dev/" from the system location and returns the remainder of the string.\n
+	 *	 Mac OSX   - Removes the prefix "/dev/cu." and "/dev/tty." from the system location and returns the remainder of the string.\n
+	 *	 Other *nix   -	The same as for GNU/Linux.
 	 * @param name a string value holding the serial port name.
 	 * @return a boolean value returning whether the function executed successful.
 	 */	
