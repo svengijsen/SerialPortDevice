@@ -1,7 +1,39 @@
-var tTimer = new TriggerTimer();
-var nMaxIdleTime = 5000;
-var bHasInitialized = false;
 var serialPortObject = new SerialPortDevice();
+var bHasInitialized = false;
+var bCleanupStarted = false;
+var sPortName = "COM1";
+
+//Create a custom dialog with only one exit button to exit the script when needed
+function Dialog(parent)
+{
+	QDialog.call(this, parent);
+	var frameStyle = QFrame.Sunken | QFrame.Panel;
+	var layout = new QGridLayout;
+	layout.setColumnStretch(1, 1);	
+	layout.setColumnMinimumWidth(1, 500);
+	/////////////////////////////////////////////////////
+	this.exitButton = new QPushButton("Exit");	
+	layout.addWidget(this.exitButton, 99, 0);
+	/////////////////////////////////////////////////////
+	this.setLayout(layout);
+	this.windowTitle = "Menu Dialog";
+}
+
+Dialog.prototype = new QDialog();
+
+Dialog.prototype.keyPressEvent = function(e /*QKeyEvent e*/)
+{
+	if(e.key() == Qt.Key_Escape)
+		this.close();
+	else
+		QDialog.keyPressEvent(e);
+}
+
+Dialog.prototype.closeEvent = function() 
+{
+	Log("Dialog closeEvent() detected!");
+	CleanupScript();
+}
 
 function myDataReceivedFunction()
 {
@@ -11,29 +43,74 @@ function myDataReceivedFunction()
 		Log("myDataReceivedFunction argument(" + i + "): " + arguments[i]);
 	}
 	serialPortObject.writeData("Echo: " + arguments[0]);
-	tTimer.startTimer(nMaxIdleTime);
 }
 
-function myFinalCleanup()//Cleanup
+function ConnectDisconnectScriptFunctions(Connect)
+//This function can connect or disconnect all signal/slot connections defined by the boolean parameter 
 {
-	if(bHasInitialized==true)
+	if(Connect) //This parameter defines whether we should connect or disconnect the signal/slots.
 	{
-		serialPortObject.SerialDataReceived.disconnect(this, this.myDataReceivedFunction);
-		tTimer.timeout.disconnect(this, myFinalCleanup);
-		tTimer.stopTimer();
-		serialPortObject.close();
+		Log("... Connecting Signal/Slots");
+		try 
+		{	
+			mainDialog.exitButton["clicked()"].connect(this, this.CleanupScript);
+			serialPortObject.SerialDataReceived.connect(this, this.myDataReceivedFunction);
+		} 
+		catch (e) 
+		{
+			Log(".*. Something went wrong connecting the Signal/Slots:" + e); //If a connection fails warn the user!
+		}
 	}
-	tTimer = null;
+	else
+	{
+		Log("... Disconnecting Signal/Slots");
+		try 
+		{	
+			mainDialog.exitButton["clicked()"].disconnect(this, this.CleanupScript);	 
+			serialPortObject.SerialDataReceived.disconnect(this, this.myDataReceivedFunction);
+		} 
+		catch (e) 
+		{
+			Log(".*. Something went wrong disconnecting the Signal/Slots:" + e); //If a disconnection fails warn the user!
+		}		
+	}
+}
+
+function CleanupScript()//Cleanup
+{
+	if(bCleanupStarted)
+		return;
+	bCleanupStarted = true;
+	//Close serial port
+	if(bHasInitialized==true)
+		serialPortObject.close();
+	//Disconnect the signal/slots
+	ConnectDisconnectScriptFunctions(false);
+	//Close dialog
+	mainDialog.close();
+	//Set all functions and constructed objects to null
 	myDataReceivedFunction = null;
+	ConnectDisconnectScriptFunctions = null;
+	CleanupScript = null;	
+	//Dialog
+	Dialog.prototype.keyPressEvent = null;
+	Dialog.prototype.closeEvent = null;	
+	Dialog.prototype.testFunction = null;
+	Dialog.prototype = null;
+	Dialog = null;
+	//Objects
+	mainDialog = null;
 	serialPortObject = null;
-	myFinalCleanup = null;
-	Log("Finished script Cleanup!");
+	//Post
+	Log("\nFinished script cleanup, ready for garbage collection!");
 	BrainStim.cleanupScript();
 }
 
-if(serialPortObject.setPortName("COM1"))
+var mainDialog = new Dialog();
+mainDialog.show();
+ConnectDisconnectScriptFunctions(true);
+if(serialPortObject.setPortName(sPortName))
 {
-	serialPortObject.SerialDataReceived.connect(this, this.myDataReceivedFunction);
 	Log(serialPortObject.open(3));
 	//        NotOpen = 0x0000,
 	//        ReadOnly = 0x0001,
@@ -54,13 +131,10 @@ if(serialPortObject.setPortName("COM1"))
 	Log(serialPortObject.dataBits());
 	Log(serialPortObject.setStopBits(1));//OneStop = 1
 	Log(serialPortObject.stopBits());
-
-	tTimer.startTimer(nMaxIdleTime);
-	tTimer.timeout.connect(this, myFinalCleanup); 
 	bHasInitialized = true;
 }
 else
 {
-	Log("Could not use the requested port!!")
-	myFinalCleanup();
+	Log("\nCould not use the requested port (" + sPortName + ") !!!\n")
+	CleanupScript();
 }

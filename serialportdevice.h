@@ -16,11 +16,9 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#ifndef SERIALPORTDEVICE_H
+#define SERIALPORTDEVICE_H
 
-//This file defines the script binding interface, all below function are scriptable except for the destructor
-
-#ifndef SerialPortDevice_H
-#define SerialPortDevice_H
 #include <QObject>
 #include <QString>
 #include <QtScript>
@@ -33,7 +31,7 @@
 
 //!  The SerialPortDevice class. 
 /*!
-  The SerialPortDevice can be used to communicate with a Device connected to the Serial Port.
+  The SerialPort Device can communicate with a device connected to a standard Serial Port.
 */
 class SerialPortDevice : public QObject, protected QScriptable
 {
@@ -53,7 +51,7 @@ public:
 	SerialPortDevice(const SerialPortDevice& other ){Q_UNUSED(other);}//TODO fill in copy constructor, should be used for the Q_DECLARE_METATYPE macro
 	~SerialPortDevice();
 
-	static QScriptValue ctor__extensionname(QScriptContext* context, QScriptEngine* engine);
+	static QScriptValue ctor_SerialPortDevice(QScriptContext* context, QScriptEngine* engine);
 
 	bool isInitialized(bool bDoInit = false);
 
@@ -318,4 +316,4 @@ private:
 	QSerialPort* serialPort;
 };
 
-#endif // SerialPortDevice_H
+#endif // SERIALPORTDEVICE_H

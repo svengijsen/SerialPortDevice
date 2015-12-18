@@ -20,7 +20,7 @@
 #include "serialportdevice.h"
 //#include <windows.h>
 
-QScriptValue SerialPortDevice::ctor__extensionname(QScriptContext* context, QScriptEngine* engine)
+QScriptValue SerialPortDevice::ctor_SerialPortDevice(QScriptContext* context, QScriptEngine* engine)
 {
 	Q_UNUSED(context);
 	//this function gets called first whenever a new object is constructed trough the script

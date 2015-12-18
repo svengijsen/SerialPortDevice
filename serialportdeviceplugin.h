@@ -50,6 +50,7 @@ private:
 	SerialPortDevice_Dialog *SerialPortDeviceDiagObject;
 
 public slots:
+	bool HasGUI() { return true; };
     bool ShowGUI();
 	bool IsCompatible() {return PluginInterface::IsCompatible();};
 	QObject *GetScriptMetaObject(int nIndex) {if(nIndex == 0) return (QObject *)SerialPortDeviceObject->metaObject(); else return NULL;};
